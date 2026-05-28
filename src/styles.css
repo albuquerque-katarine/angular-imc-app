@@ -1,0 +1,8 @@
+.text-color {
+    color: #0B5ED7;
+}
+
+input[type='submit'] {
+    margin-right: 10px;
+    cursor: pointer;
+}

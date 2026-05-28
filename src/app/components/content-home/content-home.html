@@ -1,0 +1,50 @@
+<h1 class="text-center mt-5">Índice de Massa Corporal</h1>
+<h3 class="text-center text-color">Descubra agora!</h3>
+
+<section class="row mt-5">
+
+    <form [formGroup]="pessoa" class="col-md-6">
+        <h5 class="mt-2">Informe os dados</h5>
+        <hr>
+        <input type="number" name="peso"   class="form-control mt-3" placeholder="Peso"   formControlName="peso">
+        <input type="number" name="altura" class="form-control mt-3" placeholder="Altura" formControlName="altura">
+        
+        <div class="mt-3">
+            <input type="submit" value="Calcular" (click)="calcularImc()" [disabled]="pessoa.invalid"
+                class="btn btn-primary">
+            <input type="submit" value="Limpar"   (click)="limpar()" class="btn btn-primary">
+        </div>
+
+        <hr>
+
+        <h1 class="fs-1 mt-2">IMC = <strong class="text-color">{{imc % 2 == 0 ?  0 : imc.toFixed(1).replace('.',',')}}</strong></h1>
+        
+    </form>
+
+    <section class="col-md-6 pb-3">
+        
+        
+        <h3 class="mt-5 mb-3 text-color">Classificação do IMC</h3>
+        
+        @if (imc < 18.5) { 
+            <p [ngStyle]="style" class="fw-bold">Abaixo de 18,5 - Abaixo do Peso</p>
+        }
+        @else if (imc >= 18.5 && imc <= 24.9) { 
+            <p [ngStyle]="style" class="fw-bold">18,5 a 24,9 - Normal</p>    
+        }
+        @else if (imc >= 24.9 && imc <= 29.9) { 
+            <p [ngStyle]="style" class="fw-bold">25,0 a 29,9 - Sobrepeso</p>
+        }
+        @else if (imc >=29.9 && imc <= 39.9) { 
+            <p [ngStyle]="style" class="fw-bold">30,0 a 39,9 - Obesidade</p>
+        }
+        @else if (imc > 40.0) {
+            <p [ngStyle]="style" class="fw-bold">Maior que 40,0 - Obesidade Grave</p>
+        }
+
+        <h6>Peso = <strong class="text-color">{{peso.toString()}} kg</strong></h6>
+        <h6>Altura = <strong class="text-color">{{altura.toString().replace('.',',')}} m</strong></h6>
+    </section>
+
+</section>
+
