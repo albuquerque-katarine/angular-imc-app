@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/content-sobre/content-sobre.css"],
+  "sourcesContent": ["img {\r\n    width: 70%;\r\n    height: auto;\r\n    border: 2px solid #0D6EFD;\r\n}"],
+  "mappings": "AAAA,IACI,MAAO,IACP,OAAQ,KACR,OAAQ,IAAI,MAAM,OACtB",
+  "names": []
+}

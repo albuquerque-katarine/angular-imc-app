@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/content-main/content-main.css"],
+  "sourcesContent": [".text-color {\r\n    color: #0B5ED7;\r\n}\r\n\r\ninput[type='submit'] {\r\n    margin-right: 10px;\r\n    cursor: pointer;\r\n}\r\n"],
+  "mappings": "AAAA,CAAC,WACG,MAAO,OACX,CAEA,KAAK,CAAC,aACF,aAAc,KACd,OAAQ,OACZ",
+  "names": []
+}
